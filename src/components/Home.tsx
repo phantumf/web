@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 const games_list = ['CSGO', 'ReadyOrNot', 'Phasmophobia', 'Simrail'];
 const hobby_list = ['ems', 'girls', 'cars', 'weapons', 'night', 'electronics', 'programming'];
 const tools_list = ['C++', 'C', 'C#', 'GO', 'TypeScript', 'JavaScript', 'HTML', 'LUA', 'ReactJS'];
@@ -16,11 +16,17 @@ const Redirect = (props: { name: string, href: string }) => (
 const Home = () => {
     const [age, setAge] = useState('--');
 
-    setInterval(() => {
-        const now = Math.round(Date.now() / 1000);
-        const age = (now - (timestamp / 1000)) / 3600 / 24 / 365;
-        setAge(age.toFixed(10));
-    }, 500)
+    useEffect(() => {
+        const refreshAge = () => {
+            const now = Math.round(Date.now() / 1000);
+            const age = (now - (timestamp / 1000)) / 3600 / 24 / 365;
+            setAge(age.toFixed(10));
+        };
+
+        refreshAge();
+
+        setInterval(refreshAge, 500);
+    });
 
     return (
         <>
@@ -46,7 +52,6 @@ const Home = () => {
                             <Redirect href='https://github.com/phantumf/' name='github'/>
                             <Redirect href='https://discord.com/users/1085638148148699187/' name='discord_user'/>
                             <Redirect href='https://discord.gg/2apRS9aSAV' name='discord_server'/>
-
                         </div>
                         <div className="padding-bottom-30" />
                     </div>
