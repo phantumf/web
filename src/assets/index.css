@@ -1,0 +1,109 @@
+body {
+  font-family: monospace;
+  overflow: hidden;
+  text-align: center;
+  line-height: 1.15;
+  color: rgb(255, 255, 255);
+  background-color: #202225;
+  user-select: none;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+img {
+  pointer-events: none;
+}
+
+a {
+  font-weight: bold;
+  color: #ddb3cc;
+  text-decoration: none;
+}
+a:hover {
+font-weight: bold;
+text-align: center;
+color: #fcdef0;
+text-decoration: none;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.fa-12 {
+  font-size: 12;
+}
+
+.main-bg {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 14%;
+  text-align: center;
+}
+
+.redirects a {
+  padding: 5px;
+  color: cornflowerblue;
+  text-decoration: none;
+}
+
+.height-15 {
+  height: 15px;
+  display: block
+}
+
+.height-30 {
+  height: 30px;
+  display: block
+}
+
+.height-45 {
+  height: 45px;
+  display: block
+}
+
+.card-content {
+  padding: 0.25rem !important;
+}
+
+.card-title {
+  margin: 0 !important;
+  margin-bottom: 10px !important;
+  font-size: 13;
+  font-family: monospace;
+}
+
+
+.padding-bottom-15 {
+  padding-bottom: 15px;
+}
+
+.padding-bottom-30 {
+  padding-bottom: 30px;
+}
+
+.padding-bottom-60 {
+  padding-bottom: 60px;
+}
+
+.padding-top-15 {
+  padding-top: 15px;
+}
+
+.padding-top-30 {
+  padding-top: 30px;
+}
+
+.card {
+  border-radius: 10px !important;
+  background-color: #131416 !important;
+  color: rgb(234, 228, 228);
+}
+
+.avatar {
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
