@@ -1,7 +1,7 @@
 import { useState } from 'react';
 const games_list = ['CSGO', 'ReadyOrNot', 'Phasmophobia', 'Simrail'];
-const hobby_list = ['programing', 'EMS', 'girls', 'cars', 'electronics', 'weapons', 'night'];
-const tools_list = ['cpp', 'c', 'cs', 'go', 'ts', 'js', 'html', 'lua', 'react'];
+const hobby_list = ['ems', 'girls', 'cars', 'weapons', 'night', 'electronics', 'programming'];
+const tools_list = ['C++', 'C', 'C#', 'GO', 'TypeScript', 'JavaScript', 'HTML', 'LUA', 'ReactJS'];
 
 const timestamp = 1190334239000;
 
