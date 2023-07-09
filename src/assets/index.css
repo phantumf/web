@@ -18,15 +18,19 @@ img {
 
 a {
   font-weight: bold;
-  color: #ddb3cc;
+  color: #d74b9f;
   text-decoration: none;
 }
 
 a:hover {
   font-weight: bold;
   text-align: center;
-  color: #fcdef0;
+  color: #b67b9e;
   text-decoration: none;
+}
+
+.c-blue {
+  color: cornflowerblue;
 }
 
 .margin-0 {

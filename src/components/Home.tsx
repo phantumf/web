@@ -1,33 +1,9 @@
-import { useState, useEffect } from 'react';
-const games_list = ['CSGO', 'ReadyOrNot', 'Phasmophobia', 'Simrail'];
-const hobby_list = ['ems', 'girls', 'cars', 'weapons', 'night', 'electronics', 'programming'];
-const tools_list = ['C++', 'C', 'C#', 'GO', 'TypeScript', 'JavaScript', 'HTML', 'LUA', 'ReactJS'];
+import { Link } from "react-router-dom";
 
-const timestamp = 1190334239000;
+const Redirect = (props: { name: string, href: string }) => props.href.includes('https') ? <a href={props.href}>{props.name}</a> : <Link to={props.href}>{props.name}</Link>
 
-const ColorView = (props: { color: string; text: string }) => (
-    <span style={{color: props.color}}>{props.text}</span>
-)
-
-const Redirect = (props: { name: string, href: string }) => (
-    <a href={props.href}>/{props.name}</a>
-)
 
 const Home = () => {
-    const [age, setAge] = useState('--');
-
-    useEffect(() => {
-        const refreshAge = () => {
-            const now = Math.round(Date.now() / 1000);
-            const age = (now - (timestamp / 1000)) / 3600 / 24 / 365;
-            setAge(age.toFixed(10));
-        };
-
-        refreshAge();
-
-        setInterval(refreshAge, 500);
-    });
-
     return (
         <>
             <div className="main-bg">
@@ -40,18 +16,15 @@ const Home = () => {
                     <div className="card-content">
                         <div className="padding-top-15" />
                         <h1 className="card-title">Aleks</h1>
-                        <p className='card-content margin-0 fa-12'>i'm {age} yo</p>
-                        <p className='card-content margin-0 fa-12'>i love <ColorView color='pink' text='C++' /></p>
-
-                        <p className='card-content margin-0 fa-12'>i like {hobby_list.map<React.ReactNode>(obj => <ColorView color='fuchsia' text={obj} />).reduce((prev, curr) => [prev, ', ', curr])}</p>
-                        <p className='card-content margin-0 fa-12'>i use {tools_list.map<React.ReactNode>(obj => <ColorView color='cyan' text={obj} />).reduce((prev, curr) => [prev, ', ', curr])}</p>
-                        <p className='card-content margin-0 fa-12'>i play {games_list.map<React.ReactNode>(obj => <ColorView color='crimson' text={obj} />).reduce((prev, curr) => [prev, ', ', curr])}</p>
+                        <p className='card-content margin-0 fa-12'>Welcome to my site.</p>
 
                         <br />
                         <div className="redirects">
-                            <Redirect href='https://github.com/phantumf/' name='github'/>
-                            <Redirect href='https://discord.com/users/1085638148148699187/' name='discord_user'/>
-                            <Redirect href='https://discord.gg/2apRS9aSAV' name='discord_server'/>
+                        <Redirect href='https://discord.gg/2apRS9aSAV' name='My discord' />
+                            <p className='card-content margin-0 fa-12'>|</p>
+                            <Redirect href='https://github.com/phantumf/' name='My github' />
+                            <p className='card-content margin-0 fa-12'>|</p>
+                            <Redirect href='/safely' name='Contact me safely' />
                         </div>
                         <div className="padding-bottom-30" />
                     </div>
